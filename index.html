@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Bangun Datar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Bangun Datar</h1>
+
+        <div class="menu">
+            <div class="menu-item" onclick="showCalculator('persegiPanjang')">
+                <div class="menu-text">Persegi Panjang</div>
+            </div>
+            <div class="menu-item" onclick="showCalculator('segitiga')">
+                <div class="menu-text">Segitiga</div>
+            </div>
+            <div class="menu-item" onclick="showCalculator('lingkaran')">
+                <div class="menu-text">Lingkaran</div>
+            </div>
+        </div>
+
+        <div id="persegiPanjang" class="calculator" style="display:none">
+            <h2>Persegi Panjang</h2>
+            <input type="number" id="panjang" placeholder="Panjang">
+            <input type="number" id="lebar" placeholder="Lebar">
+            <button onclick="hitungLuasKeliling('persegiPanjang')">Hitung</button>
+            <div class="result" id="luasPersegiPanjang"></div>
+            <div class="result" id="kelilingPersegiPanjang"></div>
+        </div>
+
+        <div id="segitiga" class="calculator" style="display:none">
+            <h2>Segitiga</h2>
+            <input type="number" id="alas" placeholder="Alas">
+            <input type="number" id="tinggi" placeholder="Tinggi">
+            <input type="number" id="sisiA" placeholder="Sisi A">
+            <input type="number" id="sisiB" placeholder="Sisi B">
+            <input type="number" id="sisiC" placeholder="Sisi C">
+            <button onclick="hitungLuasKeliling('segitiga')">Hitung</button>
+            <div class="result" id="luasSegitiga"></div>
+            <div class="result" id="kelilingSegitiga"></div>
+        </div>
+
+        <div id="lingkaran" class="calculator" style="display:none">
+            <h2>Lingkaran</h2>
+            <input type="number" id="jariJari" placeholder="Jari-jari">
+            <button onclick="hitungLuasKeliling('lingkaran')">Hitung</button>
+            <div class="result" id="luasLingkaran"></div>
+            <div class="result" id="kelilingLingkaran"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
